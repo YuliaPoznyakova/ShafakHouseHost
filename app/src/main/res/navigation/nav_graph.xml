@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/optionsFragment">
+    <fragment
+        android:id="@+id/optionsFragment"
+        android:name="com.example.shafakhousehost.OptionsFragment"
+        android:label="OptionsFragment" >
+        <action
+            android:id="@+id/action_optionsFragment_to_statisticsFragment"
+            app:destination="@id/statisticsFragment" />
+        <action
+            android:id="@+id/action_optionsFragment_to_tuneFragment"
+            app:destination="@id/tuneFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/statisticsFragment"
+        android:name="com.example.shafakhousehost.StatisticsFragment"
+        android:label="fragment_statistics"
+        tools:layout="@layout/fragment_statistics" >
+        <action
+            android:id="@+id/action_statisticsFragment_to_optionsFragment"
+            app:destination="@id/optionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tuneFragment"
+        android:name="com.example.shafakhousehost.TuneFragment"
+        android:label="fragment_tune"
+        tools:layout="@layout/fragment_tune" >
+        <action
+            android:id="@+id/action_tuneFragment_to_optionsFragment"
+            app:destination="@id/optionsFragment" />
+    </fragment>
+</navigation>
